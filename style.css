@@ -1,0 +1,14 @@
+
+body{
+    background-color: black;
+    text-align: center;
+} 
+#board{
+    /*height: 700px;
+    width: 500px;
+    left: 500px;
+    top: 22px;
+    position: fixed;*/
+    /*background-color: aqua;*/
+    background-image: url("background.png");
+}
