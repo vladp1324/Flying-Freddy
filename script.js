@@ -35,7 +35,7 @@ let defaultPlatformSpeed = 2;
 let platformSpeed = defaultPlatformSpeed;
 
 freddyImg = new Image();
-freddyImg.src = "fredy.png";
+freddyImg.src = "Assets/fredy.png";
 let freddy = {
     img : freddyImg,
     x : freddyPosX,
@@ -247,15 +247,15 @@ function placePlatform(){
     switch(typePlatform){
         case 1:
             platformVelocityX = 0;
-            platformImg.src = "platform.png";
+            platformImg.src = "Assets/platform.png";
             break;
         case 2:
             platformVelocityX = velplatX;
-            platformImg.src = "moving_platform.png";
+            platformImg.src = "Assets/moving_platform.png";
             break;
         case 3:
             platformVelocityX = 0;
-            platformImg.src = "trap_platform.png";
+            platformImg.src = "Assets/trap_platform.png";
             break;
         default:
             break;
