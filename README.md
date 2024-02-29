@@ -1,7 +1,9 @@
 # Flying Freddy
  
 A simple platformer game inspired by Doodle Jump.
-https://vladp1324.github.io/Flying-Freddy/
+You can try the game [here](https://vladp1324.github.io/Flying-Freddy/).
+
+## Screenshots
 
 ![](/Screenshots/ss1.png)
 
