@@ -72,22 +72,16 @@ window.onload = function(){
     board.height = boardHeight;
     context = board.getContext("2d");
 
-    /*const backgroundAudio = new Audio();
-    backgroundAudio.src = 'https://www.youtube.com/watch?v=yNrvYeTzzv0';
-    backgroundAudio.volume = 0.9;
-    backgroundAudio.play();*/
-
-    jumpAudio = new Audio("jump_sound_effect.wav");
+    jumpAudio = new Audio("Assets/jump_sound_effect.wav");
     jumpAudio.volume = 0.1;
 
-    gameOverAudio = new Audio("game_over.wav");
+    gameOverAudio = new Audio("Assets/game_over.wav");
     gameOverAudio.volume = 0.3;
 
     generatePlatforms();
     requestAnimationFrame(update);
     document.addEventListener("keydown", keyHandler);
     document.addEventListener("keyup", keyHandler);
-    //setInterval(placePlatform, 100);
 }
 
 function colision(platform){
@@ -194,11 +188,6 @@ function update(timestamp){
     //draw game
     renderGame();
 
-    // if(keyState.down["ArrowUp"])
-    //     cameraY -= 3.0 * deltaTime;
-    // if (keyState.down["ArrowDown"])
-    //     cameraY += 3.0 * deltaTime;
-    
     changePlatformState();
 
     checkCollision();
@@ -210,14 +199,11 @@ function update(timestamp){
     clerPlatforms();
 
     generatePlatforms();
-    //console.log(platformArray.length);
     
     printScore();
     
     if(gameOver){
         printGameOver();
-        //gameOverAudio.play();
-        //gameOverAudio.stop();
         printRestartGame();
     }
 }
@@ -306,10 +292,10 @@ function moveFreddy(){
     if(freddy.y - cameraY < maxJumpHeight){
         cameraY -= 2.5 * deltaTime;
     }
-    
+
     velocityY += gravity * deltaTime;//aplic gravitatie
     freddy.y += velocityY * deltaTime * 0.5;
-
+    
     if(freddy.y - cameraY > boardHeight){
         gameOver = true;
         if(gameOverAudioPlayed == false){
